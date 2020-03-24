@@ -1,0 +1,215 @@
+html, body {
+	background-color: #7461a9;
+	color: #fff;
+	font-weight: 100;
+	height: 100vh;
+	margin: 0;
+	font-family: 'Muli', sans-serif;
+}
+
+label {
+	font-weight: 100;
+	font-size: 12px;
+	margin: 15px 0 10px 0;
+}
+
+form {
+	margin-top:80px;
+}
+
+.text-danger {
+    color: #CCC;
+}
+
+.greetings {
+		font-size: 30px;
+}
+
+.alert-success {
+    color: #FFF;
+    background-color: #7461a9;
+    border-color: #7461a9;
+	font-size: 15px;
+}
+
+.cust-text-rounded {
+	border-radius:50px;
+}
+
+.btn-send {
+	margin-top: 50px;
+    border-radius: 50px;
+    background-color: #FFF;
+    color: #151c44;
+    font-weight: 700;
+    float: right;
+    width: 150px;
+}
+.btn-home {
+	margin-top: 50px;
+    border-radius: 50px;
+    background-color: #FFF;
+    color: #151c44;
+    font-weight: 700;
+    float: left;
+    width: 150px;
+}
+
+.embed-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+@media (min-width: 1025px) {
+
+  .logo {
+	   margin: 50px;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+		width: auto\9; /* ie8 */
+	}
+
+	.menu {
+		margin-top: 100px;
+		margin-bottom: 150px;
+	}
+
+	.menu-video {
+		margin-top: 100px;
+		margin-bottom: 150px;
+	}
+
+	.footer .img-responsive {
+		margin: 0 auto;
+
+	}
+
+
+}
+
+
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  	.logo {
+	   margin: 50px;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+		width: auto\9; /* ie8 */
+	}
+
+	.menu {
+		margin-top: 100px;
+		margin-bottom: 150px;
+	}
+
+	.menu-video {
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+
+
+	.footer .img-responsive {
+		margin: 0 auto;
+	}
+
+
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  	.logo {
+	   margin: 50px 50px 30px 50px;
+	}
+
+	.menu {
+		margin-top: 25px;
+		margin-bottom: 35px;
+	}
+
+	.menu-video {
+		margin-top: 10px;
+		margin-bottom: 5px;
+	}
+
+	.menu .img-responsive {
+		max-width: 75%;
+	}
+
+	.footer .img-responsive {
+		display:none;
+		margin: 0 auto;
+		max-width: 85%;
+	}
+
+.embed-container {
+	position: relative;
+	padding-bottom: 50%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  //CSS
+
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  //CSS
+
+}
