@@ -73,6 +73,9 @@ form {
 	height: 100%;
 }
 
+.form-error {
+  border: 2px solid #e74c3c;
+}
 
 @media (min-width: 1025px) {
 

@@ -24,3 +24,9 @@ Route::get('/video', function () {
 Route::get('/prospects', function () {
     return view('prospects');
 });
+
+Route::post('/prospects', 'Controller@store');
+
+Route::get('/mail', function () {
+    return view('mail');
+});
