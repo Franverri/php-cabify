@@ -1,10 +1,29 @@
 @extends('master')
 
 @section('content')
-<h1>{{ $msg ?? '' }}</h1>
 <div class="container">
   <form method="POST" action="/prospects" accept-charset="UTF-8">
     {{ csrf_field() }}
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        @isset($succed)
+          @if($succed === true)
+          <div class="alert alert-success alert-dismissable">
+           <button type="button" class="close" data-dismiss="alert">×</button>
+                  <strong>{{ $msg ?? '' }}</strong>
+          </div>
+          @else
+          <div class="alert alert-danger alert-dismissable">
+           <button type="button" class="close" data-dismiss="alert">×</button>
+                  <strong>{{ $msg ?? '' }}</strong>
+          </div>
+          @endif
+        @endisset
+
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
     <div class="row">
       <div class="col-sm-1"></div>
       <div class="col-sm-5">

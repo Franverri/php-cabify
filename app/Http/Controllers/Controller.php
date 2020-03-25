@@ -31,9 +31,9 @@ class Controller extends BaseController
       if ($existeMail === NULL) {
         $data = array("name"=>$name,"lastname"=>$lastname,"email"=>$email, "created_at"=>$date);
         DB::table('prospects')->insert($data);
-        return view('prospects', ["msg"=>"Se ha enviado el mail a la casilla indicada"]);
+        return view('prospects', ["succed"=>true, "msg"=>"Se ha enviado el mail a la casilla indicada"]);
       } else {
-        return view('prospects', ["msg"=>"La casilla indicada ya recibió el mail"]);
+        return view('prospects', ["succed"=>false, "msg"=>"La casilla indicada ya recibió el mail"]);
       }
     }
 }
