@@ -26,7 +26,3 @@ Route::get('/prospects', function () {
 });
 
 Route::post('/prospects', 'Controller@store');
-
-Route::get('/mail', function () {
-    return view('mail');
-});
