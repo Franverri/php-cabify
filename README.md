@@ -39,7 +39,7 @@ php artisan key:generate
 Desde la carpeta de laradock:
 
 ```console
-docker-compose up -d mysql
+docker-compose up -d nginx mysql
 ```
 
 ## MySQL
