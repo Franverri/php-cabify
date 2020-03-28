@@ -21,6 +21,13 @@ class Controller extends BaseController
 
     public function store(Request $request)
     {
+
+      $request->validate([
+          'name' => 'required|max:255',
+          'lastname' => 'required|max:255',
+          'email' => 'required|email|max:255',
+      ]);
+
       $name = $request->input('name');
       $lastname = $request->input('lastname');
       $email = $request->input('email');
@@ -30,8 +37,6 @@ class Controller extends BaseController
       $existeMail = DB::table('prospects')->where('email', $email)->first();
 
       if ($existeMail === NULL) {
-        $text = "Prueba de texto";
-
         $data = array("name"=>$name,"lastname"=>$lastname,"email"=>$email, "created_at"=>$date);
         DB::table('prospects')->insert($data);
 
@@ -44,11 +49,11 @@ class Controller extends BaseController
         });
 
         //Envío de mail a la casilla propia
-        Mail::send("emails.mailtous", ['text' => $text, 'name' =>
-          $name, 'email' => $email], function
-          ($message) use ($name, $email) {
+        Mail::send("emails.mailtous", ['name' =>
+          $name, 'lastname' => $lastname, 'email' => $email], function
+          ($message) use ($name, $lastname, $email) {
           $message->to("etcheverrifranco@gmail.com", "Cabify")
-            ->subject("Response Available");
+            ->subject("Mail enviado");
              $message->from($email, $name);
         });
 

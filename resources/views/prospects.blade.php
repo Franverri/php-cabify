@@ -7,6 +7,14 @@
     <div class="row">
       <div class="col-sm-1"></div>
       <div class="col-sm-10">
+        @if ($errors->any())
+        <div class="alert alert-danger alert-dismissable">
+         <button type="button" class="close" data-dismiss="alert">×</button>
+         @foreach ($errors->all() as $error)
+             <strong>{{ $error }}</strong><br>
+         @endforeach
+        </div>
+        @endif
         @isset($succed)
           @if($succed === true)
           <div class="alert alert-success alert-dismissable">
