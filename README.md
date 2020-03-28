@@ -19,7 +19,7 @@ Abrimos el archivo `docker-compose.yml` y buscamos INSTALL_XDEBUG para poner est
 ## Configurar el .env de Laravel
 
 ```console
-cp .env.example .env
+cp env-example .env
 ```
 
 Dicho archivo es a modo de ejemplo y será necesario modificar el mail asignado para que funcionen correctamente el envío de los mismos. Para ello es necesario setear un mail y contraseña válidos de gmail y adicionalmente activar la opción de `acceso de apps menos seguras` en la cuenta.
@@ -28,8 +28,8 @@ Dicho archivo es a modo de ejemplo y será necesario modificar el mail asignado 
 
 ```console
 cd laradock
-docker-compose exec workspace bash
-cp .env.example .env
+cp env-example .env
+docker-compose run workspace bash
 composer install
 php artisan key:generate
 ```
@@ -39,7 +39,7 @@ php artisan key:generate
 Desde la carpeta de laradock:
 
 ```console
-docker-compose up -d nginx mysql
+docker-compose up -d mysql
 ```
 
 ## MySQL
